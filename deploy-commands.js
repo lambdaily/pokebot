@@ -4,11 +4,15 @@ const { REST, Routes} = require('discord.js');
 const commands = [
   {
     name: 'ping',
-    description: 'Replies with Pong!'
+    description: 'Responde con pong!'
   },
   {
     name: 'pokemon',
-    description: 'Assigns a random Pokemon to the user'
+    description: 'Asigna un pokemon aleatorio al usuario'
+  },
+  {
+    name: 'cambiamon',
+    description: 'Cambia el pokemon asignado al usuario'
   }
 ];
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);

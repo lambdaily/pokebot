@@ -47,6 +47,37 @@ client.on("interactionCreate", async (interaction) => {
     } catch (error) {
       console.error(error);
     }
+  } else if (interaction.commandName === "cambiamon") {
+    const member = interaction.member;
+    const existingPokemon = assignedPokemons.get(member.id);
+
+    if (!existingPokemon) {
+      const embed = new EmbedBuilder()
+        .setColor("#FF0000")
+        .setTitle("No tienes un Pokémon asignado")
+        .setDescription(
+          "Primero debes usar el comando `/pokemon` para recibir un Pokémon."
+        );
+      await interaction.reply({ embeds: [embed] });
+      return;
+    }
+
+    try {
+      const pokemon = await getRandomPokemon();
+      assignedPokemons.set(member.id, pokemon);
+      const embed = new EmbedBuilder()
+        .setColor("#008000")
+        .setTitle("¡Has recibido un nuevo Pokémon!")
+        .setDescription(
+          `Tu nuevo Pokémon asignado es **${pokemon.name}** (#${pokemon.id}), de tipo ${pokemon.type}.`
+        )
+        .setImage(
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`
+        );
+      await interaction.reply({ embeds: [embed] });
+    } catch (error) {
+      console.error(error);
+    }
   }
 });
 

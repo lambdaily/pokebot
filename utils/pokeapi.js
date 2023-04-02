@@ -2,7 +2,7 @@ const axios = require("axios");
 
 async function getRandomPokemon() {
   try {
-    const id = Math.floor(Math.random() * 898) + 1;
+    const id = Math.floor(Math.random() * 200) + 1;
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const response = await axios.get(url);
 
