@@ -1,202 +1,68 @@
 
+# Bot de Pokémon Discord
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https:https://github.com/lambdaily/pokebot">
-    <img src="img/logo.jpg" alt="Logo" width="80" height="80">
-  </a>
+Este es un bot de Discord que asigna Pokémon a los miembros del servidor. Cada miembro puede recibir un Pokémon aleatorio y cambiarlo por otro si lo desean.
 
-  <h3 align="center">POKETTO BOT PARAGUAY</h3>
+## Pasos de implementación
 
-  <p align="center">
-    Un bot que te asigna tu propio espíritu pokemon
-    <br />
-    <a href="https://github.com/lambdaily/pokebot/README.md"><strong>Revisa la documentación»</strong></a>
-    <br />
-    <br />
+Sigue los siguientes pasos para implementar este bot de Pokémon en Node.js:
 
-  </p>
-</div>
+### 1. Configuración del entorno
 
+Asegúrate de tener Node.js instalado en tu sistema. También necesitarás una cuenta de Discord y un token de bot, que puedes obtener creando una aplicación de bot en el [Portal de Desarrolladores de Discord](https://discord.com/developers/applications).
 
-<details>
-  <summary>Guía de contenido</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">Acerca del proyecto</a>
-      <ul>
-        <li><a href="#built-with">Contruido con</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Como iniciar?</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisitos</a></li>
-        <li><a href="#installation">Instalación</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Uso</a></li>
-    <li><a href="#license">Licencia</a></li>
-    <li><a href="#contact">Contacto</a></li>
-  </ol>
-</details>
+### 2. Configuración del proyecto
 
+1.  Clona este repositorio o crea un nuevo proyecto de Node.js.
+2.  Abre una terminal en la carpeta raíz del proyecto.
 
+### 3. Instalación de dependencias
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+Ejecuta el siguiente comando en la terminal para instalar las dependencias necesarias:
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+bash
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+    `npm install discord.js dotenv` 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+### 4. Configuración de variables de entorno
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Crea un archivo `.env` en la carpeta raíz del proyecto y define las siguientes variables:
 
-Use the `BLANK_README.md` to get started.
+makefile
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    `TOKEN=tu_token_de_bot_aquí` 
 
+### 5. Implementación del código
 
+Copia y pega el código proporcionado en un archivo llamado `bot.js` en la carpeta raíz del proyecto.
 
-### Built With
+### 6. Ejecución del bot
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Ejecuta el siguiente comando en la terminal para iniciar el bot:
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+bash
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+    `node bot.js` 
 
+### 7. Configuración del bot en Discord
 
+1.  Ve al [Portal de Desarrolladores de Discord](https://discord.com/developers/applications) y selecciona tu aplicación de bot.
+2.  En la sección "Bot", haz clic en "Add Bot" para convertir tu aplicación en un bot.
+3.  Copia el token del bot y reemplaza `tu_token_de_bot_aquí` en el archivo `.env` con tu token de bot.
 
-<!-- GETTING STARTED -->
-## Getting Started
+¡Listo! Ahora tu bot de Pokémon está en funcionamiento y listo para asignar Pokémon a los miembros de tu servidor de Discord.
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Recuerda invitar a tu bot al servidor de Discord y configurar los permisos necesarios para que pueda interactuar con los miembros.
 
-### Prerequisites
+## Contribución
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Si deseas contribuir a este proyecto, siéntete libre de enviar pull requests o reportar problemas en la página de issues del repositorio.
 
-### Installation
+## Licencia
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Este proyecto está bajo la Licencia MIT.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+## Agradecimientos
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+Este bot de Pokémon se basa en la biblioteca Discord.js y utiliza la PokeAPI para obtener información y sprites de los Pokémon. Agradecimientos especiales a los desarrolladores de Discord.js y la PokeAPI por proporcionar estas herramientas.
 
